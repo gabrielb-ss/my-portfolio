@@ -2,7 +2,10 @@ import { Container } from './styles'
 import logoImg from '../../assets/logo.png'
 import sunImg from '../../assets/sun.svg'
 import moonImg from '../../assets/moon.svg'
-import React, { useState } from 'react';
+import projectsImg from '../../assets/projects.svg'
+import curriculumImg from '../../assets/curriculum.svg'
+import contactImg from '../../assets/contact.svg'
+import { useState } from 'react';
 
 export function Header () {
   const [activeTab, setActiveTab] = useState([0,1,0]);
@@ -18,9 +21,15 @@ export function Header () {
         <img src={logoImg} alt="Gabriel Barbosa"/>
 
         <nav>
-          <a onClick={() => selectTab(0)} className={activeTab[0] === 1 ? "active" : "inactive" }>user</a>
-          <a onClick={() => selectTab(1)} className={activeTab[1] === 1 ? "active" : "inactive" }>projects</a>
-          <a onClick={() => selectTab(2)} className={activeTab[2] === 1 ? "active" : "inactive" }>contact</a>
+          <a onClick={() => selectTab(0)} className={activeTab[0] === 1 ? "active" : "inactive" }>
+            <img src={curriculumImg} alt="" />
+          </a>
+          <a onClick={() => selectTab(1)} className={activeTab[1] === 1 ? "active" : "inactive" }>
+            <img src={projectsImg} alt="" />
+          </a>
+          <a onClick={() => selectTab(2)} className={activeTab[2] === 1 ? "active" : "inactive" }>
+            <img src={contactImg} alt="" />
+          </a>
         </nav>
 
         <div id='switchers-container'>
