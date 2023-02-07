@@ -14,6 +14,7 @@ export const Container = styled.header`
     align-items: center;
 
     a {
+      cursor: pointer;
       background: rgba(255, 255, 255, 0.33);
       border-radius: .8rem;
       width: 7.5rem;
@@ -25,9 +26,16 @@ export const Container = styled.header`
       text-align: center;
     }
 
-    .selected {
+    .active {
+      transition: all 0.3s ease-in;
       width: 10rem;
       height: 10rem;
+    }
+
+    .inactive {
+      transition: all 0.2s ease-in;
+      width: 7.5rem;
+      height: 7.5rem;
     }
     
   }
