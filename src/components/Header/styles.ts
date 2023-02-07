@@ -6,7 +6,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3.3rem 10rem 0;
+  padding: 3.3rem 8rem 0;
 
   nav {
     display: flex;
@@ -45,22 +45,22 @@ export const Container = styled.header`
   #switchers-container {
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
+    gap: 2rem;
 
     input[type=checkbox]{
-    height: 0;
-    width: 0;
-    visibility: hidden;
+      height: 0;
+      width: 0;
+      visibility: hidden;
     }
 
     label {
       cursor: pointer;
       color: transparent;
-      border: 2px solid white;
+      border: .2rem solid white;
       width: 3.7rem;
       height: 2.4rem;
       display: block;
-      border-radius: 100px;
+      border-radius: 10rem;
       position: relative;
     }
 
@@ -71,11 +71,11 @@ export const Container = styled.header`
       padding: .8rem 1.4rem;
 
       width: 12rem;
-      height: 4rem;
+      height: 3.75rem;
 
       background: rgba(255, 255, 255, 0.38);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 1.6rem;
+      border-radius: 1.2rem;
     }
 
     label:after {
