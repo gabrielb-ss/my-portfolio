@@ -33,22 +33,20 @@ export function Header () {
         </nav>
 
         <div id='switchers-container'>
-          <div className='switcher' id='light-mode'>
+          <div className='switcher' >
             <img src={sunImg} alt="" />
             <input type="checkbox" id="mode" />
             <label htmlFor="mode"></label>
             <img src={moonImg} id="moon" alt="" />
           </div>
 
-          <div className='switcher' id='language'>
+          <div className='switcher'>
             <p>PT</p>
             <input type="checkbox" id="lang" />
             <label htmlFor="lang"></label>
             <p id='en'>EN</p>
           </div>
         </div>
-        
-        
     </Container>
   );
 }

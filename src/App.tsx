@@ -1,16 +1,16 @@
 import { Header } from "./components/Header";
 import { GlobalStyle } from "./styles/global";
-import { Slide } from "./components/Slide";
+import { Projects } from "./components/Projects";
 
-function App() {
+export function App() {
   return (
     <>
       <Header></Header>
-      <Slide></Slide>
+      <Projects></Projects>
 
       <GlobalStyle />
     </>
   )
 }
 
-export default App
+
