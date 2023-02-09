@@ -8,6 +8,10 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   
+  p {
+    margin-bottom: 3rem;
+  }
+
   .aside-icon {
     padding: 3rem;
     display: flex;
