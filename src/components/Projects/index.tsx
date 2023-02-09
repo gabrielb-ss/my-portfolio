@@ -6,9 +6,11 @@ export type Project = {
   title: string,
   features: {
     description: string,
-    feats: string[]
+    feats: string[],
+    tools: string[]
   }
 }
+
 
 export function Projects () {
   const [curr_project, setCurr_project] = useState(0);
@@ -17,14 +19,19 @@ export function Projects () {
     title: "title",
     features: {
       description: "Aplicação de gerenciamento de finanças",
-      feats: ["feat1", "feat2", "feat3"]
+      feats: ["feat1", "feat2", "feat3"],
+      tools: ["tool1", "tool2", "tool3"]
     }
   }
 
 
   return (
     <Container>
-     <Aside project={projects}/>
+      <Aside 
+        description={projects.features.description} 
+        features={projects.features.feats}
+        type={"features"}
+      />
 
     </Container>
   );
