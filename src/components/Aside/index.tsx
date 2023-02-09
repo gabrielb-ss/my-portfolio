@@ -1,21 +1,25 @@
-import { Project } from '../Projects';
 import { Content } from './styles';
+import featuresImg from '../../assets/features.svg';
+import toolsImg from '../../assets/tools.svg';
 
 type AsideProps = {
-  project: Project
+  description: string, 
+  features: string[], 
+  type: string
 }
 
-export function Aside ({project:{features}}: AsideProps) {
+export function Aside ({description, features, type}: AsideProps) {
   return (
+   
     <Content>
       <div className="aside-icon">
-        <img src="" alt="" />
+        <img src={type === "features" ? featuresImg : toolsImg } alt="" />
       </div>
     
       <div className="aside-content">
-        <p>{features.description}</p>
+        <p>{description}</p>
         <ul>
-            {features.feats.map(feat => <li>{feat}</li>)}
+            {features.map((feat, index) => <li key={index}>{feat}</li>)}
         </ul>
       </div> 
     </Content>
