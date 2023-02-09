@@ -14,23 +14,37 @@ export type Project = {
 
 export function Projects () {
   const [curr_project, setCurr_project] = useState(0);
+  
 
-  const projects: Project =  { 
-    title: "title",
+  const projects: Project[] = [{ 
+    title: "Dt-money",
     features: {
       description: "Aplicação de gerenciamento de finanças",
       feats: ["feat1", "feat2", "feat3"],
       tools: ["tool1", "tool2", "tool3"]
     }
-  }
+  }, { 
+    title: "JD15",
+    features: {
+      description: "Jogo dos 15",
+      feats: ["feat1", "feat2", "feat3"],
+      tools: ["tool1", "tool2", "tool3"]
+    }
+  }];
 
 
   return (
     <Container>
       <Aside 
-        description={projects.features.description} 
-        features={projects.features.feats}
+        description={projects[curr_project].features.description} 
+        features={projects[curr_project].features.feats}
         type={"features"}
+      />
+
+      <Aside 
+        description={projects[curr_project].features.description} 
+        features={projects[curr_project].features.feats}
+        type={"tools"}
       />
 
     </Container>
