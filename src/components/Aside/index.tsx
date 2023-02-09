@@ -3,12 +3,15 @@ import featuresImg from '../../assets/features.svg';
 import toolsImg from '../../assets/tools.svg';
 
 type AsideProps = {
-  description: string, 
-  features: string[], 
-  type: string
+  type: string,
+  features: {
+    tools: string[],
+    description: string,
+    feats: string[]
+  }
 }
 
-export function Aside ({description, features, type}: AsideProps) {
+export function Aside ({type, features:{tools, description, feats}}: AsideProps) {
   return (
    
     <Content>
@@ -19,7 +22,7 @@ export function Aside ({description, features, type}: AsideProps) {
       <div className="aside-content">
         <p>{description}</p>
         <ul>
-            {features.map((feat, index) => <li key={index}>{feat}</li>)}
+            {feats.map((feat, index) => <li key={index}>{feat}</li>)}
         </ul>
       </div> 
     </Content>

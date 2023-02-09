@@ -5,10 +5,10 @@ import { useState } from 'react';
 export type Project = { 
   title: string,
   features: {
+    tools: string[],
     description: string,
-    feats: string[],
-    tools: string[]
-  }
+    feats: string[]
+  },
 }
 
 
@@ -19,16 +19,17 @@ export function Projects () {
   const projects: Project[] = [{ 
     title: "Dt-money",
     features: {
+      tools: ["tool1", "tool2", "tool3"],
       description: "Aplicação de gerenciamento de finanças",
-      feats: ["feat1", "feat2", "feat3"],
-      tools: ["tool1", "tool2", "tool3"]
+      feats: ["feat1", "feat2", "feat3"]
     }
+    
   }, { 
     title: "JD15",
     features: {
+      tools: ["react", "typescript", "styled-components"],
       description: "Jogo dos 15",
-      feats: ["feat1", "feat2", "feat3"],
-      tools: ["tool1", "tool2", "tool3"]
+      feats: ["feat1", "feat2", "feat3"]
     }
   }];
 
@@ -36,14 +37,12 @@ export function Projects () {
   return (
     <Container>
       <Aside 
-        description={projects[curr_project].features.description} 
-        features={projects[curr_project].features.feats}
+        features={projects[curr_project].features}
         type={"features"}
       />
 
       <Aside 
-        description={projects[curr_project].features.description} 
-        features={projects[curr_project].features.feats}
+        features={projects[curr_project].features}
         type={"tools"}
       />
 
