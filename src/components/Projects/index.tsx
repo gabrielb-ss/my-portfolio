@@ -19,7 +19,7 @@ export function Projects () {
   const projects: Project[] = [{ 
     title: "Dt-money",
     features: {
-      tools: ["tool1", "tool2", "tool3"],
+      tools: ["reactjs", "typescript", "styledComponents", "vscode", "github"],
       description: "Aplicação de gerenciamento de finanças",
       feats: ["feat1", "feat2", "feat3"]
     }
@@ -27,9 +27,9 @@ export function Projects () {
   }, { 
     title: "JD15",
     features: {
-      tools: ["react", "typescript", "styled-components"],
+      tools: ["styledComponents", "vscode", "github", "reactjs", "typescript"],
       description: "Jogo dos 15",
-      feats: ["feat1", "feat2", "feat3"]
+      feats: ["features one", "feateature two", "feature three"]
     }
   }];
 
