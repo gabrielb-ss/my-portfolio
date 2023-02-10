@@ -30,13 +30,12 @@ export function Aside ({type, features:{tools, description, feats}}: AsideProps)
   
 
   return (
-   
     <Content>
       <div className="aside-icon">
         <img src={type === "features" ? featuresImg : toolsImg } alt="aside-icon" />
       </div>
     
-      <div className={"aside-content "}>
+      <div className={"aside-content " + type}>
         <p>{type === "features" ? description : ''}</p>
         <ul>
            {Item(type, feats, tools)}
