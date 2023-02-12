@@ -2,7 +2,6 @@ import { Content } from './styles';
 import featuresImg from '../../assets/features.svg';
 import toolsImg from '../../assets/tools.svg';
 
-
 type AsideProps = {
   type: string,
   features: {
@@ -25,10 +24,7 @@ function Item(type: string, features: string[], tools: string[]) {
   }
 }
 
-
 export function Aside ({type, features:{tools, description, feats}}: AsideProps) {
-  
-
   return (
     <Content>
       <div className="aside-icon">
