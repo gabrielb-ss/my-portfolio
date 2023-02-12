@@ -1,6 +1,7 @@
 import { Container } from './styles';
 import { Aside } from '../Aside';
 import { useState } from 'react';
+import { SlideShow } from '../SlideShow';
 
 export type Project = { 
   title: string,
@@ -17,7 +18,7 @@ export function Projects () {
   
 
   const projects: Project[] = [{ 
-    title: "Dt-money",
+    title: "dtmoney",
     features: {
       tools: ["reactjs", "typescript", "styledComponents", "vscode", "github"],
       description: "Aplicação de gerenciamento de finanças",
@@ -25,7 +26,7 @@ export function Projects () {
     }
     
   }, { 
-    title: "JD15",
+    title: "jd15",
     features: {
       tools: ["styledComponents", "vscode", "github", "reactjs", "typescript"],
       description: "Jogo dos 15",
@@ -41,6 +42,7 @@ export function Projects () {
         type={"features"}
       />
 
+      <SlideShow projectName={projects[curr_project].title}/>
       <Aside 
         features={projects[curr_project].features}
         type={"tools"}

@@ -31,7 +31,13 @@ export const Content = styled.div`
      margin-bottom: 3rem;
     }
 
+    * {
+      font-weight: 700;
+      font-size: 2.4rem;
+    }
+
     text-align: justify;
+    font-size: 3rem;
   }
 
   .aside-content.tools {
