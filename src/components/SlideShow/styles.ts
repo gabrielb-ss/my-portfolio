@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  * {border: 0px solid white;}
+
+  * {
+    :hover {
+     // background-color:rgba(0,0,0, 0.33) ;
+    }
+    //outline: 1px solid white;
+  }
+
   width: 64vw;
   background: rgba(255, 255, 255, 0.33);
 
@@ -10,86 +17,38 @@ export const Container = styled.div`
   grid-template-rows: 0.2fr 3.2fr 0.5fr;
 
   grid-template-areas:
-    "left title right"
+    "title title title"
     "left slides right"
-    "github slides indicator";
+    "github github indicator";
 
   #project-title {
     grid-area: title;
     text-decoration: none;
-    
+
     h1 {
+      margin-top: 1rem;
       text-align: center;
       font-weight: 700;
       font-size: 3.2rem;
       text-transform: uppercase;
     }
+
+    transition: all .2s ease-out;
+    :hover {
+      transition: all .2s ease-in;
+      background-color: rgba(0,0,0, 0.33);
+    }
   }
 
-  ol, li {
+  .slides-container {
+    grid-area: slides;
     list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  @keyframes tonext {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: 100%;
-    }
-    98% {
-      left: 100%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-
-  @keyframes tostart {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: -300%;
-    }
-    98% {
-      left: -300%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-
-  @keyframes snap {
-    96% {
-      scroll-snap-align: center;
-    }
-    97% {
-      scroll-snap-align: none;
-    }
-    99% {
-      scroll-snap-align: none;
-    }
-    100% {
-      scroll-snap-align: center;
-    }
-  }
-
-  .carousel__viewport {
-    grid-area: "slides";
-    list-style: none;
+    overflow: hidden;
 
     display: flex;
 
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-
-    .carousel__slide {
-      position: relative;
+    .slide {
+      transition: all 1s ease-out;
       flex: 0 0 100%;
 
       img {
@@ -98,44 +57,73 @@ export const Container = styled.div`
         height: 100%;
       }
     }
-   
   }
 
-  .carousel__snapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    scroll-snap-align: center;
+  .slider {
+    cursor: pointer;
+    border-radius: .8rem;
+    transition: all .2s ease-out;
+
+    :hover {
+      transition: all .2s ease-in;
+      background-color: rgba(0,0,0, 0.33);
+    }
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
-
-  .carousel__snapper {
-    animation-name: tonext, snap;
-    animation-timing-function: ease;
-    animation-duration: 1s;
-    animation-iteration-count: 3;
-  }
-
-  .carousel__slide:last-child .carousel__snapper {
-    animation-name: tostart, snap;
-  }
-
+  
   .slider#left{
     grid-area: left;
   }
 
   .slider#right{
     grid-area: right;
+    img {
+      transform: scaleX(-1);
+    }
   }
 
   #github-link {
     grid-area: github;
-  }
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: all .2s ease-out;
+    :hover {
+      transition: all .2s ease-in;
+      background-color: rgba(0,0,0, 0.33);
+    }
 
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+  
   #slide-indicator {
-    list-style: none;
     grid-area: indicator;
+    list-style: none;
+    margin-right: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    li {
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid black;
+      border-radius: 50%;
+    }
   }
 `
