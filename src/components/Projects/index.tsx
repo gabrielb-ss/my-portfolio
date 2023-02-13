@@ -13,25 +13,26 @@ export type Project = {
   },
 }
 
-const projects: Project[] = [{ 
-  title: "dtmoney",
-  features: {
-    tools: ["reactjs", "typescript", "styledComponents", "vscode", "github"],
-    description: "Aplicação de gerenciamento de finanças",
-    feats: ["feat1", "feat2", "feat3"]
-  }
-  
-}, { 
-  title: "jd15",
-  features: {
-    tools: ["styledComponents", "vscode", "github", "reactjs", "typescript"],
-    description: "Jogo dos 15",
-    feats: ["features one", "feateature two", "feature three"]
-  }
-}];
-
 export function Projects () {
   const [currProject, setCurrProject] = useState(0);
+
+  const projects: Project[] = [{ 
+    title: "dtmoney",
+    features: {
+      tools: ["reactjs", "typescript", "styledComponents", "vscode", "github"],
+      description: "Aplicação de gerenciamento de finanças",
+      feats: ["feat1", "feat2", "feat3"]
+    }
+    
+  }, { 
+    title: "jd15",
+    features: {
+      tools: ["styledComponents", "vscode", "github", "reactjs", "typescript"],
+      description: "Jogo dos 15",
+      feats: ["features one", "feateature two", "feature three"]
+    }
+  }];
+
 //mudar aside style para estilo condicional usando o styled-componets
   return (
     <Container>

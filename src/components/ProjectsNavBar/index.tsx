@@ -12,8 +12,8 @@ export function ProjectsNavBar ({projects, setCurrProject}: ProjectsNavBarProps)
   function generateItem () {
     return projects.map((project, index) => {
        return (
-         <li> 
-           <a href="" onClick={() => setCurrProject(index)}>{project.title}</a>
+         <li key={index}> 
+           <a onClick={() => setCurrProject(index)}>{project.title}</a>
          </li>
        )}
      )

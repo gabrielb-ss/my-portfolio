@@ -36,6 +36,7 @@ export const Content = styled.nav`
       align-items: center;
 
       a {
+        cursor: pointer;
         text-decoration: none;
         text-transform: uppercase;
       }
