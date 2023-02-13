@@ -2,6 +2,7 @@ import { Container } from './styles';
 import { Aside } from '../Aside';
 import { useState } from 'react';
 import { SlideShow } from '../SlideShow';
+import { ProjectsNavBar } from '../ProjectsNavBar';
 
 export type Project = { 
   title: string,
@@ -12,40 +13,43 @@ export type Project = {
   },
 }
 
+const projects: Project[] = [{ 
+  title: "dtmoney",
+  features: {
+    tools: ["reactjs", "typescript", "styledComponents", "vscode", "github"],
+    description: "Aplicação de gerenciamento de finanças",
+    feats: ["feat1", "feat2", "feat3"]
+  }
+  
+}, { 
+  title: "jd15",
+  features: {
+    tools: ["styledComponents", "vscode", "github", "reactjs", "typescript"],
+    description: "Jogo dos 15",
+    feats: ["features one", "feateature two", "feature three"]
+  }
+}];
 
 export function Projects () {
-  const [curr_project, setCurr_project] = useState(0);
-  
-
-  const projects: Project[] = [{ 
-    title: "dtmoney",
-    features: {
-      tools: ["reactjs", "typescript", "styledComponents", "vscode", "github"],
-      description: "Aplicação de gerenciamento de finanças",
-      feats: ["feat1", "feat2", "feat3"]
-    }
-    
-  }, { 
-    title: "jd15",
-    features: {
-      tools: ["styledComponents", "vscode", "github", "reactjs", "typescript"],
-      description: "Jogo dos 15",
-      feats: ["features one", "feateature two", "feature three"]
-    }
-  }];
-
-
+  const [currProject, setCurrProject] = useState(0);
+//mudar aside style para estilo condicional usando o styled-componets
   return (
     <Container>
-      <Aside 
-        features={projects[curr_project].features}
+      <Aside
+        features={projects[currProject].features}
         type={"features"}
       />
 
-      <SlideShow projectName={projects[curr_project].title}/>
+      <SlideShow projectName={projects[currProject].title}/>
+
       <Aside 
-        features={projects[curr_project].features}
+        features={projects[currProject].features}
         type={"tools"}
+      />
+
+      <ProjectsNavBar 
+        projects={projects} 
+        setCurrProject ={setCurrProject} 
       />
 
     </Container>
