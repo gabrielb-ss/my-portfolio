@@ -1,13 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container } from './styles';
 import arrowImg from '../../assets/slideArrow.png';
 
 type slideShowProps = {
-  projectName: string;
+  projectName: string,
+  currProject: number
 }
 
-export function SlideShow({projectName}: slideShowProps) {
+export function SlideShow({projectName, currProject}: slideShowProps) {
   const [currentSlide, setCurrentSlide] = useState(0); 
+
+  useEffect (() => {
+    setCurrentSlide(0);
+  }, [currProject])
 
   function changeSlide(side: string){
     const lastSlide = 2;
@@ -26,7 +31,6 @@ export function SlideShow({projectName}: slideShowProps) {
         setCurrentSlide(firstSlide) //
       }
     }
-    
   }
 
   return (
@@ -44,7 +48,7 @@ export function SlideShow({projectName}: slideShowProps) {
           <img src={`/projects/${projectName}/2.png`} alt="" />
         </li>
 
-        <li className="slide"style={{transform: `translate(${currentSlide*-100}%)`}}>
+        <li className="slide" style={{transform: `translate(${currentSlide*-100}%)`}}>
           <img src={`/projects/${projectName}/3.png`} alt="" />
         </li>
       </ol>

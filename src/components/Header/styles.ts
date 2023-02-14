@@ -86,7 +86,7 @@ export const Container = styled.header`
       width: 1rem;
       height: 1rem;
       background: #fff;
-      border-radius: 9rem;
+      border-radius: 50%;
       transition: 0.3s;
     }
 

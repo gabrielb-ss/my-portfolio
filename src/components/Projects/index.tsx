@@ -2,6 +2,7 @@ import { Container } from './styles';
 import { Aside } from '../Aside';
 import { useState } from 'react';
 import { SlideShow } from '../SlideShow';
+import { ProjectsNavBar } from '../ProjectsNavBar';
 
 export type Project = { 
   title: string,
@@ -12,10 +13,8 @@ export type Project = {
   },
 }
 
-
 export function Projects () {
-  const [curr_project, setCurr_project] = useState(0);
-  
+  const [currProject, setCurrProject] = useState(0);
 
   const projects: Project[] = [{ 
     title: "dtmoney",
@@ -34,18 +33,28 @@ export function Projects () {
     }
   }];
 
-
+//mudar aside style para estilo condicional usando o styled-componets
   return (
     <Container>
-      <Aside 
-        features={projects[curr_project].features}
+      <Aside
+        features={projects[currProject].features}
         type={"features"}
       />
 
-      <SlideShow projectName={projects[curr_project].title}/>
+      <SlideShow 
+        projectName={projects[currProject].title}
+        currProject={currProject}
+      />
+
       <Aside 
-        features={projects[curr_project].features}
+        features={projects[currProject].features}
         type={"tools"}
+      />
+
+      <ProjectsNavBar 
+        currProject={currProject}
+        projects={projects} 
+        setCurrProject ={setCurrProject} 
       />
 
     </Container>
