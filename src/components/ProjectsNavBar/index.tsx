@@ -27,10 +27,8 @@ export function ProjectsNavBar ({projects, currProject, setCurrProject}: Project
 
   return (
     <Content>
-      <div id="menuIcon">
-        <img  src={navIconImg} alt="Menu icon" />
-      </div>
-
+       <img id="menuIcon" src={navIconImg} alt="Menu icon" />
+       
       <ul>
         {generateItem()}
       </ul>
