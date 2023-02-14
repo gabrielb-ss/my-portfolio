@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { Content as NavBar } from '../ProjectsNavBar/styles';
 
 export const Container = styled.div`
+  
   width: 100vw;
-  height: 64vh;
+  height: 59.4vh;
   margin-top: 4rem;
   display: grid;
 

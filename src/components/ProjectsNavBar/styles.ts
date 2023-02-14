@@ -2,8 +2,6 @@ import styled from 'styled-components'
 
 export const Content = styled.nav`
  //* {outline: 1px green solid}
-  
-  height: 14rem;
   padding: 3.5rem 4.5rem;
   margin-top: 3.2rem;
   border-radius: 1.6rem 1.6rem 0 0;

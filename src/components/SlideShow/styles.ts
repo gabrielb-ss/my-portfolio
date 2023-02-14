@@ -10,6 +10,8 @@ export const Container = styled.div`
   }
 
   width: 64vw;
+  height: inherit;
+
   background: rgba(255, 255, 255, 0.33);
 
   display: grid;

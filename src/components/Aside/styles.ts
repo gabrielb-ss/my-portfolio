@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   width: 18vw;
+  height: inherit;
   background: rgba(0, 0, 0, 0.33);
   
   display: flex;

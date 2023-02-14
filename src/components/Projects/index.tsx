@@ -56,7 +56,6 @@ export function Projects () {
         projects={projects} 
         setCurrProject ={setCurrProject} 
       />
-
     </Container>
   );
 }
