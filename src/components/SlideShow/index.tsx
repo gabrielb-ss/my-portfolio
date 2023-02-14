@@ -48,7 +48,7 @@ export function SlideShow({projectName, currProject}: slideShowProps) {
           <img src={`/projects/${projectName}/2.png`} alt="" />
         </li>
 
-        <li className="slide"style={{transform: `translate(${currentSlide*-100}%)`}}>
+        <li className="slide" style={{transform: `translate(${currentSlide*-100}%)`}}>
           <img src={`/projects/${projectName}/3.png`} alt="" />
         </li>
       </ol>
