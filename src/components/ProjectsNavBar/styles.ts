@@ -1,14 +1,23 @@
 import styled from 'styled-components'
 
 export const Content = styled.nav`
- //* {outline: 1px green solid}
-  padding: 3.5rem 4.5rem;
-  margin-top: 3.2rem;
-  border-radius: 1.6rem 1.6rem 0 0;
+  width: 64vw;
+  height:12vh;
+
+  position: absolute;
+  bottom: 0;
+  right: 18vw;
+  
+  padding: 0 4.5rem;
   background: rgba(0, 0, 0, 0.15);
+  border-radius: 1.6rem 1.6rem 0 0;
 
   display: flex;
   align-items: center;
+  
+  #menuIcon {
+    height: 50%;
+  }
 
   ul {
     width: 100%;
@@ -18,7 +27,7 @@ export const Content = styled.nav`
     gap: 5rem;
 
     li {
-      transition: all .1s ease-out;
+      transition: all .2s ease-out;
       border-radius: .8rem;
       background: rgba(255, 255, 255, 0.33);
 
@@ -36,8 +45,8 @@ export const Content = styled.nav`
     }
 
     .active {
-        transition: all .1s ease-in;
-        transform: translate(0, -20%);
+        transition: all .2s ease-in;
+        transform: translate(0, -10%);
         background-color: rgba(255, 255, 255, 0.66);
 
         a {
