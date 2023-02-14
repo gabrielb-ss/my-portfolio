@@ -1,4 +1,4 @@
-#  <p align="center"> MY PORTIFOLIO </p>
+#  <p align="center"> MY PORTFOLIO </p>
 ### <p align="center"> [figma](https://www.figma.com/file/acES0uimPhaYFJiRXeSJ5i/Untitled?node-id=1%3A3&t=VqJCZs6SVeRGz8m4-1) </p>
 
 ## design day 1
