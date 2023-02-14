@@ -52,6 +52,7 @@ export function Projects () {
       />
 
       <ProjectsNavBar 
+        currProject={currProject}
         projects={projects} 
         setCurrProject ={setCurrProject} 
       />
