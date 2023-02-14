@@ -3,10 +3,15 @@ import styled from 'styled-components';
 export const Container = styled.header`
   background-color: transparent;
   width: 100vw;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3.3rem 8rem 0;
+  padding: 5rem 8rem 0;
+
+ #gb-logo {
+  height: 10vh;
+ }
 
   nav {
     display: flex;
@@ -14,32 +19,28 @@ export const Container = styled.header`
     align-items: center;
 
     a {
+      width: 6vh;
+      height: 6vh;
+      
       cursor: pointer;
       background: rgba(255, 255, 255, 0.33);
       border-radius: .8rem;
-      width: 7.5rem;
-      height: 7.5rem;
+      padding: 2rem;
    
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
+
+      transition: all .1s ease-out;
     }
 
     .active {
-      transition: all 0.3s ease-in;
-      width: 10rem;
-      height: 10rem;
-      padding: 3.25rem;
-    }
-
-    .inactive {
+      transition: all .1s ease-in;
       padding: 2.5rem;
-      transition: all 0.2s ease-in;
-      width: 7.5rem;
-      height: 7.5rem;
+      width: 8vh;
+      height: 8vh;
     }
-    
   }
   // Switch
   #switchers-container {
@@ -48,9 +49,7 @@ export const Container = styled.header`
     gap: 2rem;
 
     input[type=checkbox]{
-      height: 0;
-      width: 0;
-      visibility: hidden;
+     display: none;
     }
 
     label {
@@ -71,10 +70,10 @@ export const Container = styled.header`
       padding: .8rem 1.4rem;
 
       width: 12rem;
-      height: 3.75rem;
+      height: 3.75vh;
 
       background: rgba(255, 255, 255, 0.38);
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25);
       border-radius: 1.2rem;
     }
 
@@ -93,10 +92,6 @@ export const Container = styled.header`
     input:checked + label:after {
       left: calc(100% - .5rem);
       transform: translateX(-100%);
-    }
-
-    #moon, #en{
-      margin-left: .5rem;
     }
 
     p {
