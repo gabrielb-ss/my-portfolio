@@ -8,9 +8,10 @@
 
 # 🛠️ Planned Features
 - Responsive
-- Dark mode
+- Dark and Light mode
 - Languages: Portuguese and English
 - Use Github's API to load projects
+- DEV FEATURES: Use Github Actions and Projects, Use NextJS.
 
 # 💻 Technologies
 Technologies used in this project:
