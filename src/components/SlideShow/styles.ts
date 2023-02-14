@@ -15,24 +15,25 @@ export const Container = styled.div`
   background: rgba(255, 255, 255, 0.33);
 
   display: grid;
-  grid-template-columns: 0.3fr 2.4fr 0.3fr; 
-  grid-template-rows: 0.2fr 3.2fr 0.5fr;
+  grid-template-columns: 0.3fr 3fr 0.3fr; 
+  grid-template-rows: 0.3fr 3fr 0.3fr;
 
   grid-template-areas:
     "title title title"
     "left slides right"
-    "github github indicator";
+    "github . indicator";
 
   #project-title {
     grid-area: title;
     text-decoration: none;
+    padding: 1rem 0;
 
     h1 {
-      margin-top: 1rem;
       text-align: center;
       font-weight: 700;
       font-size: 3.2rem;
       text-transform: uppercase;
+      text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
     }
 
     transition: all .2s ease-out;
@@ -89,10 +90,9 @@ export const Container = styled.div`
 
   #github-link {
     grid-area: github;
-    width: 10rem;
-    height: 10rem;
+    height: 90%;
     border-radius: 50%;
-    margin-left: 1rem;
+    padding-top: .25rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,14 +100,10 @@ export const Container = styled.div`
     transition: all .2s ease-out;
     :hover {
       transition: all .2s ease-in;
-      background-color: rgba(0,0,0, 0.33);
-    }
-
-    img {
-      width: 80%;
-      height: 80%;
-      object-fit: cover;
-      overflow: hidden;
+      img {
+        border-radius: 50%;
+        background-color: rgba(0,0,0, 0.33);
+      }
     }
   }
   
