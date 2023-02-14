@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Content = styled.nav`
-  * {outline: 1px green solid}
+ //* {outline: 1px green solid}
   
   height: 14rem;
   padding: 3.5rem 4.5rem;
@@ -12,12 +12,6 @@ export const Content = styled.nav`
   display: flex;
   align-items: center;
 
-
-  #menuIcon {
-    width: 6.7rem;
-    margin-right: 8.3rem;
-  }
-
   ul {
     width: 100%;
     list-style: none;
@@ -26,9 +20,8 @@ export const Content = styled.nav`
     gap: 5rem;
 
     li {
-      width: 5.7rem;
-      height: 5.7rem;
-      border-radius: 1.6rem;
+      transition: all .1s ease-out;
+      border-radius: .8rem;
       background: rgba(255, 255, 255, 0.33);
 
       display: flex;
@@ -36,10 +29,22 @@ export const Content = styled.nav`
       align-items: center;
 
       a {
+        padding: 1rem;
         cursor: pointer;
         text-decoration: none;
         text-transform: uppercase;
+        font-weight: 700;
       }
     }
+
+    .active {
+        transition: all .1s ease-in;
+        transform: translate(0, -20%);
+        background-color: rgba(255, 255, 255, 0.66);
+
+        a {
+          color: black;
+        }
+      }
   }
 `

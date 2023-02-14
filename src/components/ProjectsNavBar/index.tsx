@@ -4,24 +4,33 @@ import navIconImg from '../../assets/navIcon.svg'
 
 type ProjectsNavBarProps = {
   projects: Project[],
+  currProject: number,
   setCurrProject: (index: number) => void
 }
 
-export function ProjectsNavBar ({projects, setCurrProject}: ProjectsNavBarProps) {
+export function ProjectsNavBar ({projects, currProject, setCurrProject}: ProjectsNavBarProps) {
+
+  function handleSelectProject(index: number){
+    setCurrProject(index)
+  }
 
   function generateItem () {
     return projects.map((project, index) => {
        return (
-         <li key={index}> 
-           <a onClick={() => setCurrProject(index)}>{project.title}</a>
+         <li key={index} className={index === currProject ? "active" : ""}>
+          <a onClick={() =>handleSelectProject(index)}>{project.title}</a>
          </li>
-       )}
-     )
-   }
+        )
+      }
+    )
+  }
 
   return (
     <Content>
-      <img id="menuIcon" src={navIconImg} alt="Menu icon" />
+      <div id="menuIcon">
+        <img  src={navIconImg} alt="Menu icon" />
+      </div>
+
       <ul>
         {generateItem()}
       </ul>
