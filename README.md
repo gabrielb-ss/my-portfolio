@@ -1,7 +1,7 @@
 #  <p align="center"> MY PORTFOLIO </p>
 ### <p align="center"> [figma](https://www.figma.com/file/acES0uimPhaYFJiRXeSJ5i/Untitled?node-id=1%3A3&t=VqJCZs6SVeRGz8m4-1) </p>
 
-<p align="center">🪧 this project is a work in progress </p>
+<p align="center">🪧 Work in progress </p>
 
 ## UI design v4
 ![v4](https://user-images.githubusercontent.com/59917720/216793240-5c9bb0fc-4472-4d4c-a22c-b7a80b66a386.png)
@@ -11,7 +11,7 @@
 - Dark and Light mode
 - Languages: Portuguese and English
 - Use Github's API to load projects
-- DEV FEATURES: Use Github Actions and Projects, Use NextJS.
+- DEV FEATURES: Use Github Actions and Projects, Use NextJS
 
 # 💻 Technologies
 Technologies used in this project:
