@@ -49,7 +49,6 @@ export const Container = styled.div`
     overflow: hidden;
 
     display: flex;
-
     .slide {
       transition: all 1s ease-out;
       flex: 0 0 100%;
