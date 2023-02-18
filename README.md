@@ -1,10 +1,10 @@
 #  <p align="center"> MY PORTFOLIO </p>
-### <p align="center"> [figma](https://www.figma.com/file/acES0uimPhaYFJiRXeSJ5i/Untitled?node-id=1%3A3&t=VqJCZs6SVeRGz8m4-1) </p>
+### <p align="center"> [figma](https://www.figma.com/file/M6LYaujqpU0yaU6CquANec/portfolio-desktop?node-id=1%3A3&t=SPFRDDsnfFOSaaTi-1) </p>
 
 <p align="center">🪧 Work in progress </p>
 
 ## UI design v4
-![v4](https://user-images.githubusercontent.com/59917720/216793240-5c9bb0fc-4472-4d4c-a22c-b7a80b66a386.png)
+![Portfolio - Desktop](https://user-images.githubusercontent.com/59917720/219899380-52965008-7bff-4513-a2c3-34aa76127e90.png)
 
 # 🛠️ Planned Features
 - Dark and Light mode
