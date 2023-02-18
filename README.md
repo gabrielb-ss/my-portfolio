@@ -7,7 +7,6 @@
 ![v4](https://user-images.githubusercontent.com/59917720/216793240-5c9bb0fc-4472-4d4c-a22c-b7a80b66a386.png)
 
 # 🛠️ Planned Features
-- Responsive
 - Dark and Light mode
 - Languages: Portuguese and English
 - Use Github's API to load projects
