@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
 export const Content = styled.nav`
-  width: 64vw;
+  min-width: 33vw;
   height:12vh;
 
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
   right: 18vw;
   
   padding: 0 4.5rem;
@@ -24,7 +26,7 @@ export const Content = styled.nav`
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: 2rem;
 
     li {
       transition: all .2s ease-out;
