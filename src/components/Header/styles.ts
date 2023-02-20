@@ -1,103 +1,106 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+  position: relative;
   background-color: transparent;
-  width: 100vw;
+  width: 100%;
   height: 10vh;
+  
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 5rem 8rem 0;
+  padding: 6rem 2rem 6rem;
+  
+  h1 {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 700;
+    top: 50%;
+    left: 50%;
 
- #gb-logo {
-  height: 10vh;
- }
-
-  nav {
-    display: flex;
-    gap: 4.2rem;
-    align-items: center;
-
-    a {
-      width: 6vh;
-      height: 6vh;
-      
-      cursor: pointer;
-      background: rgba(255, 255, 255, 0.33);
-      border-radius: .8rem;
-      padding: 2rem;
-   
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-
-      transition: all .1s ease-out;
-    }
-
-    .active {
-      transition: all .1s ease-in;
-      padding: 2.5rem;
-      width: 8vh;
-      height: 8vh;
-    }
+    text-align: center;
+    
+    transform: translate(-50%, -50%);
   }
-  // Switch
-  #switchers-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
 
-    input[type=checkbox]{
-     display: none;
+  #gb-logo {
+    height: 8rem;
+  }
+  
+  // Switch
+  .switcher {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem 1.4rem;
+
+    width: 12rem;
+
+    background: rgba(255, 255, 255, 0.38);
+    box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25);
+    border-radius: 1.2rem;
+  }
+
+  input[type=checkbox]{
+    display: none;
+  }
+  
+  label {
+    cursor: pointer;
+    color: transparent;
+    border: .2rem solid white;
+    width: 3.7rem;
+    height: 2.4rem;
+    display: block;
+    border-radius: 10rem;
+    position: relative;
+  }
+
+  label:after {
+    content: '';
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  input:checked + label:after {
+    left: calc(100% - .5rem);
+    transform: translateX(-100%);
+  }
+
+  
+  @media (max-width: 750px) {
+    padding:5rem 2rem 5rem;
+
+    h1 {
+      font-size: 2rem;
     }
 
-    label {
-      cursor: pointer;
-      color: transparent;
-      border: .2rem solid white;
-      width: 3.7rem;
-      height: 2.4rem;
-      display: block;
-      border-radius: 10rem;
-      position: relative;
+    #gb-logo {
+      height: 5rem;
     }
 
     .switcher {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: .8rem 1.4rem;
-
-      width: 12rem;
-      height: 3.75vh;
-
-      background: rgba(255, 255, 255, 0.38);
-      box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25);
-      border-radius: 1.2rem;
-    }
-
-    label:after {
-      content: '';
-      position: absolute;
-      top: .5rem;
-      left: .5rem;
-      width: 1rem;
-      height: 1rem;
-      background: #fff;
-      border-radius: 50%;
-      transition: 0.3s;
-    }
-
-    input:checked + label:after {
-      left: calc(100% - .5rem);
-      transform: translateX(-100%);
-    }
-
-    p {
-      font-size: 1.2rem;
-      font-weight: 700;
+      padding: .4rem .7rem;
+      width: 9rem;
     }
   }
-  
+
+  @media (max-width: 400px) {
+    .switcher {
+      width: fit-content;
+
+      img {
+        display: none;
+      }
+    }
+  }
 `;
