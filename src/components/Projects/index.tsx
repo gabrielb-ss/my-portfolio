@@ -41,12 +41,12 @@ export function Projects () {
         type={"features"}
       />
 
-      <SlideShow 
+      <SlideShow
         projectName={projects[currProject].title}
         currProject={currProject}
       />
 
-      <Aside 
+      <Aside
         features={projects[currProject].features}
         type={"tools"}
       />
