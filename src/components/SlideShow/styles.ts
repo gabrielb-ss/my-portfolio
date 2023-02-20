@@ -8,8 +8,10 @@ export const Container = styled.div`
     }
     //outline: 1px solid white;
   }
+  position: relative;
+  grid-area: slides;
 
-  width: 64vw;
+  width: inherit;
   height: inherit;
 
   background: rgba(255, 255, 255, 0.33);
@@ -89,19 +91,26 @@ export const Container = styled.div`
 
   #github-link {
     grid-area: github;
-    height: 90%;
-    border-radius: 50%;
+    padding-bottom: 1rem;
     padding-top: .25rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
+    img {
+      border-radius: 50%;
+      background-color: rgba(0,0,0, 0.33);
+    }
+
     transition: all .2s ease-out;
     :hover {
       transition: all .2s ease-in;
       img {
         border-radius: 50%;
-        background-color: rgba(0,0,0, 0.33);
+        background-color: rgba(0,0,0, 0.66);
       }
     }
   }
@@ -122,5 +131,42 @@ export const Container = styled.div`
       border: 1px solid black;
       border-radius: 50%;
     }
+  }
+
+  @media (max-width: 750px) {
+    width: 100vw;
+    .slider, #slide-indicator{
+      display: none;
+    }
+
+    #project-title > h1{
+      font-size: 2rem;
+    }
+
+    .slides-container{
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      .slide {
+        scroll-snap-align: center;
+      }
+    }
+
+    #github-link {
+      position: absolute;
+      bottom: 5%;
+      left: 1%;
+      padding: 0;
+      outline: 1px solid black;
+
+      img {
+        max-width: 10vw;
+        max-height: 10vw;
+      }
+    }
+    
+    grid-template-areas:
+    "title title title"
+    "slides slides slides"
+    "slides slides slides";
   }
 `
