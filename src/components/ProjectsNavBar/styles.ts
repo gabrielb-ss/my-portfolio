@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 export const Content = styled.nav`
-  min-width: 33vw;
-  height:12vh;
+  min-width: fit-content;
+  max-width: 64vw;
+  height: 12vh;
 
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
-  right: 18vw;
   
-  padding: 0 4.5rem;
+  padding: 0 2rem;
   background: rgba(0, 0, 0, 0.15);
   border-radius: 1.6rem 1.6rem 0 0;
 
@@ -19,6 +19,7 @@ export const Content = styled.nav`
   
   #menuIcon {
     height: 50%;
+    margin-right: 2rem;
   }
 
   ul {
@@ -48,12 +49,19 @@ export const Content = styled.nav`
 
     .active {
         transition: all .2s ease-in;
-        transform: translate(0, -10%);
+        transform: translate(0, -5%);
         background-color: rgba(255, 255, 255, 0.66);
 
         a {
           color: black;
         }
       }
+  }
+
+  @media (max-width:750px){
+    position: relative;
+    height: 7rem;
+    background: rgba(0, 0, 0, .33);
+    border-radius: 1.6rem;
   }
 `
