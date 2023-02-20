@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Container } from './styles';
 import arrowImg from '../../assets/slideArrow.png';
-import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 
 type slideShowProps = {
   projectName: string,
@@ -10,12 +9,10 @@ type slideShowProps = {
 
 export function SlideShow({projectName, currProject}: slideShowProps) {
   const [currentSlide, setCurrentSlide] = useState(0); 
-  const {width} = useWindowDimensions();
-  const [prevWidth, setPrevWidth] = useState(1);
 
   useEffect (() => {
     setCurrentSlide(0);
-  }, [currProject, (width <= 750)]);
+  }, [currProject]);
 
 
   function changeSlide(side: string){
