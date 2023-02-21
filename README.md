@@ -7,10 +7,9 @@
 ![Portfolio - Desktop](https://user-images.githubusercontent.com/59917720/219899380-52965008-7bff-4513-a2c3-34aa76127e90.png)
 
 # 🛠️ Planned Features
+- Responsive
 - Dark and Light mode
-- Languages: Portuguese and English
 - Use Github's API to load projects
-- DEV FEATURES: Use Github Actions and Projects, Use NextJS
 
 # 💻 Technologies
 Technologies used in this project:
