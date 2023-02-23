@@ -27,7 +27,7 @@ export function Projects () {
   }, { 
     title: "jd15",
     features: {
-      tools: ["styledComponents", "vscode", "github", "reactjs", "typescript"],
+      tools: ["godot", "vscode", "github"],
       description: "Jogo dos 15",
       feats: ["features one", "feateature two", "feature three"]
     }
