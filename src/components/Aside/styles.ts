@@ -30,12 +30,13 @@ export const Content = styled.div`
 
   .aside-content.features {
     p {
+
      margin-bottom: 3rem;
     }
 
     * {
       font-weight: 700;
-      font-size: 2.4rem;
+      font-size: clamp(1.6rem, 1.5vw, 2.4rem);
     }
 
     text-align: justify;
@@ -83,10 +84,6 @@ export const Content = styled.div`
     }
 
     .aside-content {
-      * {
-        //outline: red solid 1px;
-      }
-
       padding: 0;
       margin: 0;
 

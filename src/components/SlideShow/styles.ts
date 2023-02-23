@@ -33,7 +33,7 @@ export const Container = styled.div`
     h1 {
       text-align: center;
       font-weight: 700;
-      font-size: 3.2rem;
+      font-size: 2.4rem;
       text-transform: uppercase;
       text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
     }
