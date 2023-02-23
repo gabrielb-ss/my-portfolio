@@ -13,14 +13,13 @@ export const GlobalStyle = createGlobalStyle`
     color: rgba(255, 255, 255, 0.8);
   }
 
- 
-
   html {
     font-size: 62.5%;
   }
 
   body {
     background-color: #190E2F;
+    background-color: ${props => props.theme === "dark" ? "rgb(10, 10, 50)" : "rgb(150, 200, 200)"};
   }
 
   /* width */
@@ -46,4 +45,3 @@ export const GlobalStyle = createGlobalStyle`
     background: gray; 
 }
 `
- 
