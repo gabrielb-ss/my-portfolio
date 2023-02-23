@@ -17,8 +17,8 @@ export const Container = styled.div`
   background: rgba(255, 255, 255, 0.33);
 
   display: grid;
-  grid-template-columns: 0.3fr 3fr 0.3fr; 
-  grid-template-rows: 0.3fr 3fr 0.3fr;
+  grid-template-columns: 1fr 10fr 1fr; 
+  grid-template-rows: 1fr 7fr 1fr;
 
   grid-template-areas:
     "title title title"
@@ -68,7 +68,7 @@ export const Container = styled.div`
     border-radius: .8rem;
     transition: all .2s ease-out;
 
-    :hover {
+    @media (hover: hover) {
       transition: all .2s ease-in;
       background-color: rgba(0,0,0, 0.33);
     }
@@ -101,6 +101,9 @@ export const Container = styled.div`
     justify-content: center;
 
     img {
+      max-width: 5vw;
+      max-height: 5vw;
+      
       border-radius: 50%;
       background-color: rgba(0,0,0, 0.33);
     }
@@ -133,6 +136,7 @@ export const Container = styled.div`
     }
   }
 
+ /*  ======================   MOBILE   ====================== */
   @media (max-width: 750px) {
     width: 100vw;
     .slider, #slide-indicator{
