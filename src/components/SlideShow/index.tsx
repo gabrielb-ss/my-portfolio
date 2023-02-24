@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Container } from './styles';
 import arrowImg from '../../assets/slideArrow.png';
+import { useWindowWidth } from '../../hooks/useWindowWidth';
 
 type slideShowProps = {
   projectName: string,
@@ -8,11 +9,18 @@ type slideShowProps = {
 }
 
 export function SlideShow({projectName, currProject}: slideShowProps) {
-  const [currentSlide, setCurrentSlide] = useState(0); 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const {width} = useWindowWidth();
+  const slidesRef = useRef<any>(null);
+  
+  function slideToStart(){
+    slidesRef.current.scroll(0,0);
+  }
 
   useEffect (() => {
     setCurrentSlide(0);
-  }, [currProject]);
+    slideToStart();
+  }, [currProject, (width < 750)]);
 
 
   function changeSlide(side: string){
@@ -40,7 +48,7 @@ export function SlideShow({projectName, currProject}: slideShowProps) {
         <h1>{projectName}</h1>
       </a>
 
-      <ol className="slides-container">
+      <ol className="slides-container" ref={slidesRef}>
         <li className="slide" style={{transform: `translate(${currentSlide*-100}%)`}}>
           <img src={`/projects/${projectName}/1.png`} alt="" />
         </li>

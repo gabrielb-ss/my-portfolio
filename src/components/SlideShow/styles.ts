@@ -28,7 +28,7 @@ export const Container = styled.div`
   #project-title {
     grid-area: title;
     text-decoration: none;
-    padding: 1rem 0;
+    padding-top: 1rem;
 
     h1 {
       text-align: center;
@@ -67,6 +67,7 @@ export const Container = styled.div`
     cursor: pointer;
     border-radius: .8rem;
     transition: all .2s ease-out;
+    background-color: transparent;
 
     @media (hover: hover) {
       transition: all .2s ease-in;
@@ -148,9 +149,11 @@ export const Container = styled.div`
     }
 
     .slides-container{
+     
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       .slide {
+        padding: 0 2rem 0;
         scroll-snap-align: center;
       }
     }
@@ -163,8 +166,8 @@ export const Container = styled.div`
       outline: 1px solid black;
 
       img {
-        max-width: 10vw;
-        max-height: 10vw;
+        max-width: 8vw;
+        max-height: 8vw;
       }
     }
     
