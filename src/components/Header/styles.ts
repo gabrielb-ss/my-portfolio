@@ -18,7 +18,7 @@ export const Container = styled.header`
     left: 50%;
 
     text-align: center;
-    
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
     transform: translate(-50%, -50%);
   }
 

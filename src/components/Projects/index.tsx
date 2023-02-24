@@ -29,7 +29,7 @@ export function Projects () {
     features: {
       tools: ["godot", "vscode", "github"],
       description: "Jogo dos 15",
-      feats: ["features one", "feateature two", "feature three"]
+      feats: ["feature one", "feature two", "feature three"]
     }
   }];
 

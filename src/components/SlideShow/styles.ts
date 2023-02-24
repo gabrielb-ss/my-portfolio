@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  
-  * {
-    :hover {
-     // background-color:rgba(0,0,0, 0.33) ;
-    }
-    //outline: 1px solid white;
-  }
   position: relative;
   grid-area: slides;
 
@@ -35,7 +28,7 @@ export const Container = styled.div`
       font-weight: 700;
       font-size: 2.4rem;
       text-transform: uppercase;
-      text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+      text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.4);
     }
 
     transition: all .2s ease-out;
@@ -65,6 +58,7 @@ export const Container = styled.div`
 
   .slider {
     cursor: pointer;
+    min-width: 5rem;
     border-radius: .8rem;
     transition: all .2s ease-out;
     background-color: transparent;
@@ -91,11 +85,11 @@ export const Container = styled.div`
   }
 
   #github-link {
+    width: 62px;
     grid-area: github;
     padding-bottom: 1rem;
     padding-top: .25rem;
     border-radius: 50%;
-    margin-left: 1rem;
 
     display: flex;
     align-items: center;
@@ -122,16 +116,16 @@ export const Container = styled.div`
   #slide-indicator {
     grid-area: indicator;
     list-style: none;
-    margin-right: 1rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: .5rem;
+    padding-right: .75rem;
 
     li {
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
       border: 1px solid black;
       border-radius: 50%;
     }
@@ -153,6 +147,7 @@ export const Container = styled.div`
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       .slide {
+        max-height: 63vh;
         padding: 0 2rem 0;
         scroll-snap-align: center;
       }
@@ -163,7 +158,6 @@ export const Container = styled.div`
       bottom: 5%;
       left: 1%;
       padding: 0;
-      outline: 1px solid black;
 
       img {
         max-width: 8vw;
