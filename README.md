@@ -1,7 +1,8 @@
 #  <p align="center"> MY PORTFOLIO </p>
 
-### <p align="center">🪧 Work in progress </p>
+### [Check it out](https://gabrielb-ss.github.io/responsive_carousel/)
 
+### <p align="center">🪧 Work in progress </p>
 <p align="center" width="100%">
     <img align="left" width="66%" src="https://user-images.githubusercontent.com/59917720/221099791-95d0a11b-557c-437e-8ca7-1a828ec19569.png">
     <img width="30%" src="https://user-images.githubusercontent.com/59917720/221099870-2d66cc1b-5385-4423-bf2d-de7328aff47e.jpeg">
