@@ -50,15 +50,15 @@ export function SlideShow({projectName, currProject}: slideShowProps) {
 
       <ol className="slides-container" ref={slidesRef}>
         <li className="slide" style={{transform: `translate(${currentSlide*-100}%)`}}>
-          <img src={`/projects/${projectName}/1.png`} alt="" />
+          <img src={`/responsive_carousel/projects/${projectName}/1.png`} alt="" />
         </li>
 
         <li className="slide" style={{transform: `translate(${currentSlide*-100}%)`}}>
-          <img src={`/projects/${projectName}/2.png`} alt="" />
+          <img src={`/responsive_carousel/projects/${projectName}/2.png`} alt="" />
         </li>
 
         <li className="slide" style={{transform: `translate(${currentSlide*-100}%)`}}>
-          <img src={`/projects/${projectName}/3.png`} alt="" />
+          <img src={`/responsive_carousel/projects/${projectName}/3.png`} alt="" />
         </li>
       </ol>
       
@@ -85,7 +85,7 @@ export function SlideShow({projectName, currProject}: slideShowProps) {
       </ol>
 
       <a href={`https://github.com/gabrielb-ss/${projectName}`} target="_blank" id='github-link'>
-        <img src="/icons/github.svg" alt="githubIcon" />
+        <img src="/responsive_carousel/icons/github.svg" alt="githubIcon" />
       </a>
     </Container>
   )

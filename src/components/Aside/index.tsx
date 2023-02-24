@@ -18,7 +18,7 @@ function Item(type: string, features: string[], tools: string[]) {
   } else if (type === "tools") {
     return tools.map((toolIcon, index) => 
       <li key={index}>
-        <img src={`/icons/${toolIcon}.svg`} alt="" />
+        <img src={`/responsive_carousel/icons/${toolIcon}.svg`} alt="" />
       </li>
     )
   }
