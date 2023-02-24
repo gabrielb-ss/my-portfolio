@@ -1,19 +1,21 @@
 #  <p align="center"> MY PORTFOLIO </p>
-### <p align="center"> [figma](https://www.figma.com/file/M6LYaujqpU0yaU6CquANec/portfolio-desktop?node-id=1%3A3&t=SPFRDDsnfFOSaaTi-1) </p>
 
-<p align="center">🪧 Work in progress </p>
+### <p align="center">🪧 Work in progress </p>
 
-## UI design v4
-![Portfolio - Desktop](https://user-images.githubusercontent.com/59917720/219899380-52965008-7bff-4513-a2c3-34aa76127e90.png)
+Desktop
+<p align="center" width="100%">
+    Mobile
+    <img align="left" width="74%" src="https://user-images.githubusercontent.com/59917720/221099791-95d0a11b-557c-437e-8ca7-1a828ec19569.png">
+    <img height="500" src="https://user-images.githubusercontent.com/59917720/221099870-2d66cc1b-5385-4423-bf2d-de7328aff47e.jpeg">
+</p>
 
-# 🛠️ Planned Features
+# 🛠️ Features
 - Responsive
 - Dark and Light mode
-- Use Github's API to load projects
+- Carousel navigation with buttons for desktop and a slider for Mobile
 
 # 💻 Technologies
 Technologies used in this project:
-
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
