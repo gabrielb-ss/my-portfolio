@@ -30,7 +30,6 @@ export const Content = styled.div`
 
   .aside-content.features {
     p {
-
      margin-bottom: 3rem;
     }
 
@@ -45,11 +44,16 @@ export const Content = styled.div`
 
   .aside-content.tools {
     p {
+      width: 0;
+      height: 0;
       display: none;
     }
 
     ul {
+      display: flex;
+      flex-direction: column;
       list-style: none;
+      gap: 3rem;
 
       li {
         display: flex;
@@ -58,11 +62,7 @@ export const Content = styled.div`
         img {
           width: 6.5rem;
         }
-      }
-
-      li + li {
-        margin-top: 5.5rem;
-      }
+      }     
     }
   }
 
@@ -112,9 +112,11 @@ export const Content = styled.div`
     }
 
     .aside-content.tools {
-      margin-top: -2rem;
-      ul > li:first-child {
-          transform: translate(0, 50%);
+    
+      ul {
+        padding-top: 2rem;
+        flex-direction: row;
+        justify-content: space-around;
       }
 
       ul > li > img {
