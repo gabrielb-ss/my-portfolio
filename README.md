@@ -2,9 +2,7 @@
 
 ### <p align="center">🪧 Work in progress </p>
 
-Desktop
 <p align="center" width="100%">
-    Mobile
     <img align="left" width="66%" src="https://user-images.githubusercontent.com/59917720/221099791-95d0a11b-557c-437e-8ca7-1a828ec19569.png">
     <img width="30%" src="https://user-images.githubusercontent.com/59917720/221099870-2d66cc1b-5385-4423-bf2d-de7328aff47e.jpeg">
 </p>
