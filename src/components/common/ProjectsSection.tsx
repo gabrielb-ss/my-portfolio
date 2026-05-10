@@ -19,7 +19,7 @@ const projects: Project[] = [
     title: "E-commerce Pro",
     description: "Plataforma completa com Next.js 15 e Stripe.",
     tags: ["Next.js", "TypeScript", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800",
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800',
     size: 'large'
   },
   {
@@ -41,8 +41,8 @@ const projects: Project[] = [
 ]
 
 const unsplashImages = [
-  'https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800',
   'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800',
+  'https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800',
   'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=800',
   'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800',
   'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=800'
@@ -57,24 +57,49 @@ export default function ProjectsSection() {
           {
             projects.map(project => (
               <div key={project.id} className='flex justify-between gap-6 max-w-1/3 bg-slate-100 p-4 rounded-lg aspect-2/1'>
-                <Image src={project.image} alt={project.title} width={200} height={200} className='rounded-2xl' />
+                <Image src={project.image} alt={project.title} width={200} height={200} className='rounded-2xl object-cover' />
                 <p>{project.description}</p>
               </div>
             ))
           }
         </div>
         {/* Detalhes do projeto em destaque */}
-        <div className='bg-slate-50 mt-2 rounded-lg p-6'>
-          <div className='p-1 flex gap-2 items-center'>
+        <div className='bg-slate-50 flex gap-4 flex-col mt-2 rounded-lg p-10'>
+          <div className='flex gap-2 items-center'>
             <Image src={projects[0].image} alt={projects[0].title} width={70} height={70} className='rounded-full aspect-square p-1 object-cover' />
             <h2 className='text-5xl font-bold'>{projects[0].title}</h2>
           </div>
-          <p className='text-lg text-slate-600 ms-10 my-4'>
+          <p className='text-lg text-slate-600 '>
             {projects[0].description}
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid consequuntur eligendi optio quo, amet quibusdam magnam dolorem. Reiciendis repudiandae tempore placeat harum ducimus illo. Illo enim sint cum tempora fugiat?
           </p>
           {/* Características */}
-          <div className='grid grid-cols-3 gap-4 mx-10'>
+          <div className='grid grid-cols-3 gap-4'>
+            <div className='bg-white py-4 px-6 flex flex-col rounded-2xl'>
+              <h3>Features</h3>
+              <ul className='list-disc list-inside'>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+              </ul>
+            </div>
+            <div className='bg-white py-4 px-6 flex flex-col rounded-2xl'>
+              <h3>Features</h3>
+              <ul className='list-disc list-inside'>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+              </ul>
+            </div>
             <div className='bg-white py-4 px-6 flex flex-col rounded-2xl'>
               <h3>Features</h3>
               <ul className='list-disc list-inside'>
@@ -84,8 +109,22 @@ export default function ProjectsSection() {
               </ul>
             </div>
           </div>
-          {/* Galeria de Imagens */}
 
+          {/* Galeria de Imagens */}
+          <div className='aspect-16/6 grid grid-cols-5 gap-2 grid-rows-3 bg-white p-2 rounded-2xl w-full'>
+            <div className='col-span-3 row-span-3 relative'>
+              <Image src={projects[0].image} alt={projects[0].title} fill className='object-cover rounded-2xl' />
+
+            </div>
+            {
+              unsplashImages.slice(0, 6).map((img, index) => (
+                <div key={index} className='relative w-full h-full rounded-lg overflow-hidden'>
+                  <Image src={img} alt={`Imagem ${index + 1}`} fill className='object-cover' />
+                </div>
+              ))
+            }
+
+          </div>
         </div>
       </div>
     </section>
