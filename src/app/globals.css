@@ -1,6 +1,3 @@
-@theme {
-}
+@import "tailwindcss";
 
-@layer base {
-  @import "tailwindcss";
-}
+@theme {}
