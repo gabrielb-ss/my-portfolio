@@ -112,40 +112,40 @@ export default function ProjectsSection() {
   const [selectedImageIdx, setSelectedImageIdx] = useState(0)
 
   return (
-    <section className="py-14 px-6 lg:px-20 bg-slate-50">
-      <div className="max-w-7xl mx-auto bg-white border-2 border-t-0 border-slate-200 px-8 py-10 rounded-2xl">
-        <h2 className=" z-10 -top-6 text-4xl font-bold text-slate-900 mb-4">Projetos em Destaque</h2>
+    <section className="py-4 px-2 lg:px-20 bg-slate-50">
+      <div className="max-w-7xl mx-auto bg-white px-4 py-6 lg:px-8 lg:py-10 rounded-lg">
+        <h2 className=" z-10 -top-6 lg:text-4xl text-2xl font-bold text-slate-900 mb-4">Projetos em Destaque</h2>
         <div className='flex gap-2'>
           {
             projects.map((project, index) => (
-              <div key={index} onClick={() => setActiveProjectIdx(index)} className={`group flex justify-between max-w-1/3 bg-slate-100 p-4 rounded-lg hover:ring-3 hover:ring-slate-300 aspect-2/1 transition-all cursor-pointer ${activeProjectIdx === index && 'ring-3 ring-slate-400!'}`}>
-                <div className='w-1/2 relative overflow-hidden rounded-2xl'>
-                  <Image src={project.icon} alt={project.title} quality={20} fill className='rounded-2xl object-cover group-hover:scale-110 transition-transform duration-300' />
+              <div key={index} onClick={() => setActiveProjectIdx(index)} className={`group flex flex-col lg:flex-row justify-center w-1/3 bg-slate-100 lg:p-4 rounded-lg hover:ring-3 hover:ring-slate-300 lg:aspect-2/1 transition-all cursor-pointer ${activeProjectIdx === index && 'ring-3 ring-slate-400!'}`}>
+                <div className='lg:w-1/2 w-full relative aspect-square overflow-hidden rounded-t-lg lg:rounded-b-lg'>
+                  <Image src={project.icon} alt={project.title} quality={50} fill className=' object-cover group-hover:scale-110 transition-transform duration-300' />
                 </div>
-                <div className='ms-2 w-1/2 h-full flex flex-col'>
-                  <h3 className='font-bold text-lg'>{project.title}</h3>
-                  <p className='overflow-hidden text-ellipsis'>{project.description}</p>
+                <div className='ms-2 lg:w-1/2 h-1/3 lg:h-full flex flex-col w-full justify-center'>
+                  <h3 className='font-bold lg:text-lg text-xs'>{project.title}</h3>
+                  <p className='overflow-hidden hidden lg:block text-ellipsis'>{project.description}</p>
                 </div>
               </div>
             ))
           }
         </div>
         {/* Detalhes do projeto em destaque */}
-        <div className='bg-slate-50 flex gap-4 flex-col mt-2 rounded-lg p-10'>
-          <h2 className='text-5xl font-bold'>{projects[activeProjectIdx].title}</h2>
-          <p className='text-lg text-slate-600 '>
+        <div className='bg-slate-50 flex gap-2 lg:gap-4 flex-col mt-2 rounded-lg px-5 py-3 lg:p-10'>
+          <h2 className='lg:text-5xl text-2xl font-bold'>{projects[activeProjectIdx].title}</h2>
+          <p className='text-md lg:text-lg text-justify leading-snug lg:leading-relaxed lg:text-left text-slate-600 '>
             {projects[activeProjectIdx].description}
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid consequuntur eligendi optio quo, amet quibusdam magnam dolorem. Reiciendis repudiandae tempore placeat harum ducimus illo. Illo enim sint cum tempora fugiat?
           </p>
           {/* Características */}
-          <div className='grid grid-cols-3 gap-4'>
+          <div className='flex flex-col lg:flex-row lg:gap-4 gap-1.5'>
             {
               projects[activeProjectIdx].details.map((detail, index) => (
-                <div key={index} className='bg-white p-4 rounded-lg border border-slate-200'>
-                  <h3 className='font-bold text-lg mb-2'>{detail.title}</h3>
-                  <ul className='list-disc list-inside text-slate-600'>
+                <div key={index} className='bg-white px-4 lg:py-4 py-2 lg:w-1/3 rounded-lg border border-slate-200 '>
+                  <h3 className='font-bold text-md lg:text-lg lg:mb-2'>{detail.title}</h3>
+                  <ul className='lg:list-disc list-inside text-slate-600 flex lg:flex-col flex-wrap gap-1 lg:gap-0 lg:text-lg text-sm'>
                     {detail.items.map((item, itemIndex) => (
-                      <li key={itemIndex}>{item}</li>
+                      <li className='bg-slate-100 lg:bg-transparent lg:px-0 px-1 rounded-lg' key={itemIndex}>{item}</li>
                     ))}
                   </ul>
                 </div>
@@ -154,18 +154,19 @@ export default function ProjectsSection() {
           </div>
 
           {/* Galeria de Imagens */}
-          <div className='aspect-16/6 grid grid-cols-5 gap-2 grid-rows-3 bg-white p-2 rounded-2xl w-full'>
-            <div className='col-span-3 row-span-3 relative'>
-              <Image src={projects[activeProjectIdx].gallery[selectedImageIdx]} alt={projects[activeProjectIdx].title} fill draggable={false} className='object-cover rounded-2xl cursor-pointer' />
-
+          <div className='lg:flex grid grid-rows-2 bg-white p-2 gap-2 rounded-lg w-full'>
+            <div className='lg:w-2/3 w-full aspect-video relative'>
+              <Image src={projects[activeProjectIdx].gallery[selectedImageIdx]} alt={projects[activeProjectIdx].title} fill draggable={false} className='object-cover rounded-lg cursor-pointer' />
             </div>
-            {
-              projects[activeProjectIdx].gallery.map((img, index) => (
-                <div key={index} style={{ display: index !== selectedImageIdx ? 'block' : 'none' }} onClick={() => setSelectedImageIdx(index)} className='relative w-full h-full rounded-lg overflow-hidden cursor-pointer'>
-                  <Image src={img} draggable={false} quality={20} alt={`Imagem ${index + 1}`} fill className='object-cover hover:scale-110 transition-transform duration-300' />
-                </div>
-              ))
-            }
+            <div className='lg:w-1/3 w-full grid grid-cols-3 lg:grid-cols-2 gap-2'>
+              {
+                projects[activeProjectIdx].gallery.map((img, index) => (
+                  <div key={index} style={{ display: index !== selectedImageIdx ? '' : 'none' }} onClick={() => setSelectedImageIdx(index)} className='relative w-full rounded-lg overflow-hidden cursor-pointer'>
+                    <Image src={img} draggable={false} quality={50} alt={`Imagem ${index + 1}`} fill className='object-cover hover:scale-110 transition-transform duration-300' />
+                  </div>
+                ))
+              }
+            </div>
           </div>
         </div>
       </div>
