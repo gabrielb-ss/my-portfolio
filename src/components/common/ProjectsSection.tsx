@@ -118,7 +118,7 @@ export default function ProjectsSection() {
         <div className='flex gap-2'>
           {
             projects.map((project, index) => (
-              <div key={index} onClick={() => setActiveProjectIdx(index)} className={`group flex flex-col lg:flex-row justify-center w-1/3 bg-slate-100 lg:p-4 rounded-lg hover:ring-3 hover:ring-slate-300 lg:aspect-2/1 transition-all cursor-pointer ${activeProjectIdx === index && 'ring-3 ring-slate-400!'}`}>
+              <div key={index} onClick={() => setActiveProjectIdx(index)} className={`group flex flex-col lg:flex-row justify-center w-1/3 bg-slate-100 lg:p-4 rounded-lg hover:ring-3 hover:ring-slate-300 lg:aspect-2/1 transition-all cursor-pointer ${activeProjectIdx === index && 'ring-3 ring-slate-300'}`}>
                 <div className='lg:w-1/2 w-full relative aspect-square overflow-hidden rounded-t-lg lg:rounded-b-lg'>
                   <Image src={project.icon} alt={project.title} quality={50} fill className=' object-cover group-hover:scale-110 transition-transform duration-300' />
                 </div>

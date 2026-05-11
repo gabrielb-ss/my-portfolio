@@ -41,7 +41,7 @@ export default function Home() {
           <div className="flex flex-col space-y-2 lg:space-y-6">
             <motion.span
               variants={itemVariants}
-              className="lg:text-sm text-xs font-medium tracking-wide px-4 py-2 rounded-2xl bg-slate-200/50 w-fit text-blue-600 uppercase"
+              className="lg:text-sm text-xs font-medium tracking-wide lg:px-4 lg:py-2 px-2 py-1 rounded-2xl bg-slate-200/50 w-fit text-blue-600 lg:uppercase"
             >
               🟢 Disponível para novos projetos
             </motion.span>
