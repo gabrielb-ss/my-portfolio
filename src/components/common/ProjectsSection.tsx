@@ -103,9 +103,9 @@ export default function ProjectsSection() {
   const [selectedImageIdx, setSelectedImageIdx] = useState(0)
 
   return (
-    <section className="py-4 px-2 lg:px-20 bg-slate-100">
-      <div className="max-w-7xl mx-auto bg-white px-4 py-6 lg:px-8 lg:py-10 rounded-lg">
-        <h2 className=" z-10 -top-6 lg:text-4xl text-2xl font-bold text-slate-900 mb-4">Projetos em Destaque</h2>
+    <section className="py-4 px-1 lg:px-20 bg-slate-100">
+      <div className="max-w-7xl mx-auto bg-white px-3 py-4 lg:px-8 lg:py-10 rounded-lg">
+        <h2 className="z-10 lg:text-4xl text-2xl font-bold text-slate-900 mb-4">Projetos em Destaque</h2>
         <div className='flex gap-2'>
           {
             projects.map((project, index) => (
@@ -122,7 +122,7 @@ export default function ProjectsSection() {
           }
         </div>
         {/* Detalhes do projeto em destaque */}
-        <div className='bg-slate-100 flex gap-2 lg:gap-4 flex-col mt-2 rounded-lg px-5 py-3 lg:p-10'>
+        <div className='bg-slate-100 flex gap-2 lg:gap-4 flex-col mt-2 rounded-lg p-3 lg:p-10'>
           <h2 className='lg:text-5xl text-2xl font-bold'>{projects[activeProjectIdx].title}</h2>
           <p className='text-md lg:text-lg text-justify leading-snug lg:leading-relaxed lg:text-left text-slate-600 '>
             {projects[activeProjectIdx].description}
@@ -131,7 +131,7 @@ export default function ProjectsSection() {
           <div className='flex flex-col lg:flex-row lg:gap-4 gap-1.5'>
             {
               projects[activeProjectIdx].details.map((detail, index) => (
-                <div key={index} className='bg-white px-4 lg:py-4 py-2 w-full rounded-lg border border-slate-200 '>
+                <div key={index} className='bg-white px-2.5 lg:p-4 py-1.5 w-full rounded-lg border border-slate-200 '>
                   <h3 className='font-bold text-md lg:text-lg lg:mb-2'>{detail.title}</h3>
                   <ul className='lg:list-disc list-inside text-slate-600 flex lg:flex-col flex-wrap gap-1 lg:gap-0 lg:text-lg text-sm'>
                     {detail.items.map((item, itemIndex) => (
