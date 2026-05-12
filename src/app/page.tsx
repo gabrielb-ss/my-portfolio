@@ -35,7 +35,7 @@ export default function Home() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid w-full bg-slate-50 p-6 lg:p-10 rounded-2xl max-w-7xl grid-cols-1 lg:gap-12 gap-4 lg:grid-cols-2 lg:items-center"
+          className="grid w-full bg-slate-100 p-6 lg:p-10 rounded-2xl max-w-7xl grid-cols-1 lg:gap-12 gap-4 lg:grid-cols-2 lg:items-center"
         >
           {/* Lado Esquerdo: Texto */}
           <div className="flex flex-col space-y-2 lg:space-y-6">
