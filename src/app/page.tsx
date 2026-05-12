@@ -39,29 +39,20 @@ export default function Home() {
         >
           {/* Lado Esquerdo: Texto */}
           <div className="flex flex-col space-y-2 lg:space-y-6">
-            <motion.span
-              variants={itemVariants}
-              className="lg:text-sm text-xs font-medium tracking-wide lg:px-4 lg:py-2 px-2 py-1 rounded-2xl bg-slate-200/50 w-fit text-blue-600 lg:uppercase"
-            >
-              🟢 Disponível para novos projetos
-            </motion.span>
-
             <motion.h1
               variants={itemVariants}
               className="text-4xl font-bold leading-none text-slate-900 md:text-7xl"
             >
-              Aquele texto bonito de uma <br />
-              <span className="text-blue-600">hero section aqui</span>
+              Gabriel Barbosa <br />
+              <span className="text-blue-600">Desenvolvedor de Sistemas</span>
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
-              className="max-w-lg text-lg text-slate-600"
+              className="max-w-lg leading-5.5 lg:leading-normal text-lg text-slate-600"
             >
-              Me contrata pelo amor de deus veyr lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque!
+              Desenvolvedor Full-Stack com experiência prática no design, construção e manutenção de aplicações web.
             </motion.p>
-
-
           </div>
 
           {/* Lado Direito: Imagem */}
@@ -70,6 +61,13 @@ export default function Home() {
             className="relative aspect-square w-full max-w-md"
           >
             {/* Elemento decorativo de fundo */}
+            <motion.span
+              variants={itemVariants}
+              className="lg:text-sm absolute bottom-2 right-2 z-10 text-xs font-medium tracking-wide lg:px-4 lg:py-2 px-2 py-1 rounded-2xl bg-white w-fit text-blue-600 lg:uppercase"
+            >
+              🟢 Disponível para novos projetos
+            </motion.span>
+
             <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-2xl bg-blue-100" />
 
             <div className="relative h-full w-full overflow-hidden rounded-2xl shadow-2xl border border-slate-100">
