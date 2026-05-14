@@ -51,7 +51,7 @@ export default function Home() {
               variants={itemVariants}
               className="max-w-lg leading-5.5 lg:leading-normal text-lg text-slate-600"
             >
-              Desenvolvedor Full-Stack com experiência prática no design, construção e manutenção de aplicações web.
+              Desenvolvedor Full-Stack com experiência prática no design, construção e manutenção de sistemas e aplicações web
             </motion.p>
           </div>
 
