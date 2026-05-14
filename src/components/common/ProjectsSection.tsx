@@ -7,6 +7,7 @@ import { useState } from 'react'
 interface Project {
   title: string
   summary: string
+  url: string
   description: string
   icon: string
   details: {
@@ -19,9 +20,10 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'Cantina Digital',
-    summary: 'Meu primeiro projeto profissional',
+    url: 'https://cantina.ensv.com.br',
+    summary: 'Sistema completo para cantinas escolares, com aplicativo para pais, PDV e dashboard administrativo',
     description:
-      'Sistema de gerenciamento para cantinas escolares, com controle de vendas, autenticação e relatórios detalhados.',
+      'Sistema contruído do zero para substituir o pagamento via Pix em cantinas escolares. No aplicativo dos pais, é possível recarregar créditos, visualizar o histórico de transações e controlar os gastos dos filhos. No módulo da cantina, a venda é feita com autenticação facial ou por tag RFID, eliminando a necessidade de dinheiro físico e agilizando o processo de compra. Já o dashboard administrativo oferece controle total sobre as operações, com relatórios de vendas em tempo real e gerenciamento de usuários. O sistema foi feito para ser uma solução completa, eficiente e de baixo custo para cantinas escolares.',
     icon:
       '/cantina.png',
     details: [
@@ -49,9 +51,10 @@ const projects: Project[] = [
   },
   {
     title: 'Vivulgo',
-    summary: 'Projeto de faculdade',
+    url: 'https://vivulgo.vercel.app',
+    summary: 'Projeto de faculdade para criar uma plataforma de links personalizada, similar ao Linktree, com foco em design e usabilidade',
     description:
-      'Aplicação web feita para reunir e compartilhar links, com foco na praticidade e facilidade de uso',
+      'Projeto acadêmico desenvolvido para criar uma plataforma de links personalizada, similar ao Linktree, com foco em design e usabilidade. O Vivulgo permite que os usuários criem um perfil personalizado com links para suas redes sociais, portfólio e outros conteúdos relevantes. O projeto foi desenvolvido utilizando Next.js para o frontend e Supabase para o backend, com autenticação via Google e e-mail. O design responsivo garante uma experiência fluida em dispositivos móveis e desktops, enquanto as funcionalidades de personalização permitem que os usuários criem um perfil único e atraente.',
     icon:
       '/vivulgoIcon.png',
     details: [
@@ -61,7 +64,7 @@ const projects: Project[] = [
       },
       {
         title: 'Competências Desenvolvidas',
-        items: ['Trabalho em equipe', 'Desenvolvimento full-stack', 'Integração com APIs de autenticação', 'Design responsivo', 'Testes unitários e de integração'],
+        items: ['Trabalho em equipe', 'Desenvolvimento full-stack', 'Integração com APIs de autenticação', 'Responsividade', 'Testes unitários e de integração'],
       },
     ],
     gallery: [
@@ -74,9 +77,10 @@ const projects: Project[] = [
   },
   {
     title: 'Assistente de campo',
-    summary: 'Protótipo criado para um ajudar um amigo biólogo em seus trabalhos de campo',
+    url: 'https://assistente-de-campo-pwa.vercel.app/',
+    summary: 'Aplicação mobile para biólogos organizarem seus trabalhos de campo, com funcionalidades de registro de observações e exportação de dados',
     description:
-      'Aplicação mobile feita para ajudar biólogos a organizarem seus trabalhos de campo, com funcionalidades de registro de observações e exportação de dados padronizados para planilhas.',
+      'Aplicação PWA desenvolvida para biólogos organizarem seus trabalhos de campo, com funcionalidades de registro de observações e exportação de dados para planilhas. O assistente de campo permite que os usuários registrem suas observações e organizem seus dados de forma eficiente, mesmo sem conexão com a internet. A aplicação foi construída utilizando React para o frontend e IndexedDb para o armazenamento local, garantindo uma experiência fluida e responsiva em diversos dispositivos. A funcionalidade de exportação de dados para planilhas facilita a análise e compartilhamento das informações coletadas durante os trabalhos de campo.',
     icon:
       '/ascamIcon.png',
     details: [
@@ -123,7 +127,10 @@ export default function ProjectsSection() {
         </div>
         {/* Detalhes do projeto em destaque */}
         <div className='bg-slate-100 flex gap-2 lg:gap-4 flex-col mt-2 rounded-lg p-3 lg:p-10'>
-          <h2 className='lg:text-5xl text-2xl font-bold'>{projects[activeProjectIdx].title}</h2>
+          <div className='flex gap-4 items-end text-sm lg:text-xl'>
+            <h2 className='lg:text-5xl text-2xl font-bold'>{projects[activeProjectIdx].title}</h2>
+            <a href={projects[activeProjectIdx].url} target='_blank' className='text-blue-600 hover:underline'>Visitar Site</a>
+          </div>
           <p className='text-md lg:text-lg text-justify leading-snug lg:leading-relaxed lg:text-left text-slate-600 '>
             {projects[activeProjectIdx].description}
           </p>
