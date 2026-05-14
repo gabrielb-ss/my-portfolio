@@ -118,7 +118,7 @@ export default function ProjectsSection() {
                   <Image src={project.icon} alt={project.title} quality={50} fill className='object-contain group-hover:scale-110 transition-transform duration-300 lg:p-3' />
                 </div>
                 <div className='lg:w-1/2 h-1/3 lg:h-full flex flex-col w-full'>
-                  <h3 className='font-bold lg:text-lg mt-1 text-xs text-center lg:text-left'>{project.title}</h3>
+                  <h3 className='font-bold lg:text-lg mt-1 text-sm text-center lg:text-left'>{project.title}</h3>
                   <p className='overflow-hidden hidden leading-5 lg:block text-ellipsis'>{project.summary}</p>
                 </div>
               </div>
@@ -126,10 +126,10 @@ export default function ProjectsSection() {
           }
         </div>
         {/* Detalhes do projeto em destaque */}
-        <div className='bg-slate-100 flex gap-2 lg:gap-4 flex-col mt-2 rounded-lg p-3 lg:p-10'>
-          <div className='flex gap-4 items-end text-sm lg:text-xl'>
-            <h2 className='lg:text-5xl text-2xl font-bold'>{projects[activeProjectIdx].title}</h2>
-            <a href={projects[activeProjectIdx].url} target='_blank' className='text-blue-600 hover:underline'>Visitar Site</a>
+        <div className='bg-slate-100 flex gap-2 lg:gap-4 flex-col mt-2 rounded-lg p-4 lg:p-10'>
+          <div className='flex gap-4 items-end'>
+            <h2 className='lg:text-5xl text-blue-600 text-2xl font-bold'>{projects[activeProjectIdx].title}</h2>
+            <a href={projects[activeProjectIdx].url} target='_blank' className='text-blue-800 lg:text-xl underline'>Visitar Site</a>
           </div>
           <p className='text-md lg:text-lg text-justify leading-snug lg:leading-relaxed lg:text-left text-slate-600 '>
             {projects[activeProjectIdx].description}
